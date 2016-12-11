@@ -1,0 +1,175 @@
+<!--
+
+C A L E N D E R . html
+calender is where an admin user can post events and look at the schedule.
+eventually interfacing with google cal API. (??)
+
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Church Deposit | Settings</title>
+
+    <link rel="stylesheet" type ="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- JQuery for the datepicker. Leave this here. -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+    <!-- Calendar settings. Also leave this here. -->
+    <link rel='stylesheet' href='fullcalendar.css' />
+    <script src='lib/jquery.min.js'></script>
+    <script src='lib/moment.min.js'></script>
+    <script src='fullcalendar.js'></script>
+
+    <script type="text/javascript">
+    $( function() {
+     $( ".datepicker" ).datepicker();
+   } );
+
+
+   $(document).ready(function() {
+
+ 		$('#calendar').fullCalendar({
+ 			header: {
+ 				left: 'prev',
+ 				center: 'title',
+ 				right: 'next'
+ 			},
+ 			selectable: true,
+ 			selectHelper: true,
+ 			select: function(start, end) {
+ 				var title = prompt('Event Title:');
+ 				var eventData;
+ 				if (title) {
+ 					eventData = {
+ 						title: title,
+ 						start: start,
+ 						end: end
+ 					};
+ 					$('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+ 				}
+ 				$('#calendar').fullCalendar('unselect');
+ 			},
+ 			editable: true,
+ 			eventLimit: true, // allow "more" link when too many events
+ 			events: [
+ 				{
+ 					title: 'All Day Event',
+ 					start: '2016-09-01'
+ 				},
+ 				{
+ 					title: 'Long Event',
+ 					start: '2016-09-07',
+ 					end: '2016-09-10'
+ 				},
+ 				{
+ 					id: 999,
+ 					title: 'Repeating Event',
+ 					start: '2016-09-09T16:00:00'
+ 				},
+ 				{
+ 					id: 999,
+ 					title: 'Repeating Event',
+ 					start: '2016-09-16T16:00:00'
+ 				},
+ 				{
+ 					title: 'Conference',
+ 					start: '2016-09-11',
+ 					end: '2016-09-13'
+ 				},
+ 				{
+ 					title: 'Meeting',
+ 					start: '2016-09-12T10:30:00',
+ 					end: '2016-09-12T12:30:00'
+ 				},
+ 				{
+ 					title: 'Lunch',
+ 					start: '2016-09-12T12:00:00'
+ 				},
+ 				{
+ 					title: 'Meeting',
+ 					start: '2016-09-12T14:30:00'
+ 				},
+ 				{
+ 					title: 'Happy Hour',
+ 					start: '2016-09-12T17:30:00'
+ 				},
+ 				{
+ 					title: 'Dinner',
+ 					start: '2016-09-12T20:00:00'
+ 				},
+ 				{
+ 					title: 'Birthday Party',
+ 					start: '2016-09-13T07:00:00'
+ 				},
+ 				{
+ 					title: 'Click for Google',
+ 					url: 'http://google.com/',
+ 					start: '2016-09-28'
+ 				}
+ 			]
+ 		});
+
+ 	});
+    </script>
+  </head>
+  <body>
+
+    <header class="nav">
+      <div class="nav--link-container">
+        <a href= "../index.html" class ="nav--title">CHURCH DEPOSIT</a>
+        <a href ="../index.html" class="nav--link">Donations</a>
+        <a href ="calendar.html" class="nav--link">Calendar</a>
+        <a href ="messages.html" class="nav--link">Messages</a>
+        <a href ="announcements.html" class="nav--link">Announcements</a>
+        <a href ="fundraising.html" class="nav--link">Fundraising</a>
+        <a href ="groups.html" class="nav--link">Groups</a>
+        <a href ="settings.html" class="nav--link">Settings</a>
+        <!--
+        BACK END!!! ADD FUNCTIONALITY TO LOG OUT.
+        As of right now its a link, but I doubt you'll use a link to log out.
+        Just leave it as a hashtag, or change it from an 'a' element. If you
+        need any help feel free to contact me.
+       -->
+        <button  type="button" name="logout" class="nav--button">LOG OUT</button>
+      </div>
+    </header>
+
+    <div class="banner">
+      <div class="banner--info"><img src="../assets/info.png" alt="" /></div>
+      <p class = "banner--title">CALENDER</p>
+      <p class = "banner--subtitle">Add events and view your calender.</p>
+    </div>
+
+    <!--
+    F O R M  C O N T A I N E R
+    - - - - - - - - - - - - - - -
+    the form container is the same for each of the 'forms' on the admin panel.
+    Right now there is just a class for styling, but you can use it to submit stuff
+    to the backend. All of the labels are purely for styling - I didn't link anything
+    at all. One thing to note - the statepicker stores all of the values as the two
+    charcter abbreviation of the state (New York = NY etc.) so when the form gets
+    submitted and a state is chosen, thats what will be sent through.
+
+    I also have not done anything to verify if they filled out every form or not.
+ -->
+
+    <form class="form--container">
+
+        <div id="calendar" class="calendar"></div>
+
+
+
+      </div>
+
+    </form>
+
+  </body>
+</html>

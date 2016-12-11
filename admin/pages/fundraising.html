@@ -1,0 +1,112 @@
+<!--
+F U N D R A I S I N G .html
+for admins to post fundraisers to the people of the church.
+the form needs to be set up on the back end. Everything else that
+I have commented on the other pages applies here as well.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Church Deposit | Fundraising</title>
+
+    <link rel="stylesheet" type ="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+
+    //incredibly simple JQuery call to create the datepicker...
+    $( function() {
+     $( ".datepicker" ).datepicker();
+   } );
+
+  //function to display image preview.
+   function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#js-photo-preview')
+                        .attr('src', e.target.result);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+      }
+    </script>
+  </head>
+  <body>
+
+    <header class="nav">
+      <div class="nav--link-container">
+        <a href= "../index.html" class ="nav--title">CHURCH DEPOSIT</a>
+        <a href ="../index.html" class="nav--link">Donations</a>
+        <a href ="calendar.html" class="nav--link">Calendar</a>
+        <a href ="messages.html" class="nav--link">Messages</a>
+        <a href ="announcements.html" class="nav--link">Announcements</a>
+        <a href ="fundraising.html" class="nav--link">Fundraising</a>
+        <a href ="groups.html" class="nav--link">Groups</a>
+        <a href ="settings.html" class="nav--link">Settings</a>
+        <!--
+        BACK END!!! ADD FUNCTIONALITY TO LOG OUT.
+        As of right now its a link, but I doubt you'll use a link to log out.
+        Just leave it as a hashtag, or change it from an 'a' element. If you
+        need any help feel free to contact me.
+       -->
+        <button type="button" name="logout" class="nav--button">LOG OUT</button>
+      </div>
+    </header>
+
+    <div class="banner">
+
+      <div class="banner--info"><img src="../assets/info.png" alt="" /></div>
+      <p class = "banner--title">FUNDRAISING</p>
+      <p class = "banner--subtitle">View the donations you have received, and export the data to excel.</p>
+
+    </div>
+
+  <!--
+  The form container is the same as the others. See the settings.html comments
+  about the form container for more information.
+-->
+
+    <div class="form--container">
+
+      <div class="form--container-left">
+        <p class="form--container-title">Fundraising</p>
+        <p class="form--container-subtitle">Input information to display fundraisers to your community.</p>
+        <label for="announcement">TITLE</label>
+        <input type="text" name="title" placeholder="Fundraising Title">
+
+        <label for="timeframe">TIME FRAME</label>
+        <div class="input-pair">
+          <input type="text" name="start" placeholder="Start" class="datepicker input-xs">
+          <label for="end">to</label>
+          <input type="text" name="end" placeholder="End" class="datepicker input-xs">
+        </div>
+
+        <label for="goal">GOAL AMOUNT</label>
+        <input type="text" name="goals" placeholder="Amount">
+      </div>
+
+      <div class="form--container-right padding-l100">
+        <p class="form--container-title">Photos</p>
+        <p class="form--container-subtitle">Add a photo to liven up the fundraiser.</p>
+
+        <!-- This is the photo uploader. I made it so there is a small preview window.-->
+        <label for="photo">UPLOAD PHOTO</label>
+        <input type="file" name="photo" onchange="readURL(this);">
+        <img src="#" alt="" id="js-photo-preview" class="fundraising--photo" />
+
+      </div>
+
+      <!-- Submit doesnt do anything as of right now. -->
+      <button type="button" name="submit" class="submit--button">SUBMIT</button>
+    </div>
+
+  </body>
+</html>

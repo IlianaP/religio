@@ -1,0 +1,98 @@
+<!--
+ A N N O U N C E M E N T S .html
+for admins to make announcements to the people of the church.
+the form needs to be set up on the back end. Everything else that
+I have commented on the other pages applies here as well.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Church Deposit | Announcements</title>
+
+    <link rel="stylesheet" type ="text/css" href="../assets/css/style.css">
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <header class="nav">
+      <div class="nav--link-container">
+        <a href= "../index.html" class ="nav--title">CHURCH DEPOSIT</a>
+        <a href ="../index.html" class="nav--link">Donations</a>
+        <a href ="calendar.html" class="nav--link">Calendar</a>
+        <a href ="messages.html" class="nav--link">Messages</a>
+        <a href ="announcements.html" class="nav--link">Announcements</a>
+        <a href ="fundraising.html" class="nav--link">Fundraising</a>
+        <a href ="groups.html" class="nav--link">Groups</a>
+        <a href ="settings.html" class="nav--link">Settings</a>
+        <!--
+        BACK END!!! ADD FUNCTIONALITY TO LOG OUT.
+        As of right now its a link, but I doubt you'll use a link to log out.
+        Just leave it as a hashtag, or change it from an 'a' element. If you
+        need any help feel free to contact me.
+       -->
+        <button  type="button" name="logout" class="nav--button">LOG OUT</button>
+      </div>
+    </header>
+
+    <div class="banner">
+      <div class="banner--info"><img src="../assets/info.png" alt="" /></div>
+      <p class = "banner--title">ANNOUNCEMENTS</p>
+      <p class = "banner--subtitle">Make annoucements to the community.</p>
+    </div>
+
+    <form class="form--container">
+      <div class="form--container-header">
+        <p class="form--container-title">Announcements</p>
+        <p class="form--container-subtitle">These announcements will be seen by everyone in the community.</p>
+      </div>
+
+      <div class="form--container-left">
+        <label for="announcement">ANNOUNCEMENT</label>
+        <textarea name="announcement" rows="16" cols="75"></textarea>
+      </div>
+
+      <div class="form--container-right">
+
+        <label for="title">TITLE</label>
+        <input type="text" name="title" placeholder="title">
+        <label for="author">AUTHOR</label>
+        <input type="text" name="author" placeholder="author">
+
+        <!--
+        For style purposes I made the private vs public choice a series of DIVs
+        that have tab indices allowing them to display a border on focus. This makes it
+        tiny bit challenging on the back end, but its totally possible and ive done it
+        before. Ive left a small javasript function at the bottom to get you started, but
+        feel free to do it however you want.
+        -->
+
+        <label for="visibility">VISIBILITY</label>
+        <div class="visibility--container" tabindex="0">
+          <p class="visibility--container-title">Public</p>
+        </div>
+        <div class="visibility--container" tabindex="0">
+          <p class="visibility--container-title">Private</p>
+        </div>
+
+      </div>
+
+      <!-- Again, this button doesnt do anything yet.  -->
+      <button type="button" name="submit" class="submit--button">SUBMIT</button>
+    </form>
+
+    <script>
+
+    $( ".visibility--container" ).on( "click", function() {
+      // you could use this to make an AJAX call sending information about
+      // which choice was made. Or you can do it any other way you want,
+      // but im leaving this here in case you want it.
+    });
+
+    </script>
+
+  </body>
+</html>

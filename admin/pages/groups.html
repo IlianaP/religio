@@ -1,0 +1,115 @@
+<!--
+
+S E T T I N G S . html
+settings is where the admins can come in and change their settings/payment.
+none of it is working back-end wise.
+
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Church Deposit | Groups</title>
+
+    <link rel="stylesheet" type ="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- JQuery for the datepicker. Leave this here. -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+    $( function() {
+     $( ".datepicker" ).datepicker();
+   } );
+
+   //function to display image preview.
+    function readURL(input) {
+             if (input.files && input.files[0]) {
+                 var reader = new FileReader();
+
+                 reader.onload = function (e) {
+                     $('#js-photo-preview')
+                         .attr('src', e.target.result);
+                 };
+                 reader.readAsDataURL(input.files[0]);
+             }
+       }
+
+    </script>
+  </head>
+  <body>
+
+    <header class="nav">
+      <div class="nav--link-container">
+        <a href= "../index.html" class ="nav--title">CHURCH DEPOSIT</a>
+        <a href ="../index.html" class="nav--link">Donations</a>
+        <a href ="calendar.html" class="nav--link">Calendar</a>
+        <a href ="messages.html" class="nav--link">Messages</a>
+        <a href ="announcements.html" class="nav--link">Announcements</a>
+        <a href ="fundraising.html" class="nav--link">Fundraising</a>
+        <a href ="groups.html" class="nav--link">Groups</a>
+        <a href ="settings.html" class="nav--link">Settings</a>
+        <!--
+        BACK END!!! ADD FUNCTIONALITY TO LOG OUT.
+        As of right now its a link, but I doubt you'll use a link to log out.
+        Just leave it as a hashtag, or change it from an 'a' element. If you
+        need any help feel free to contact me.
+       -->
+        <button  type="button" name="logout" class="nav--button">LOG OUT</button>
+      </div>
+    </header>
+
+    <div class="banner">
+      <div class="banner--info"><img src="../assets/info.png" alt="" /></div>
+      <p class = "banner--title">Groups</p>
+      <p class = "banner--subtitle">Create and review group requests for your parish.</p>
+    </div>
+
+    <!--
+    F O R M  C O N T A I N E R
+    - - - - - - - - - - - - - - -
+    the form container is the same for each of the 'forms' on the admin panel.
+    Right now there is just a class for styling, but you can use it to submit stuff
+    to the backend. All of the labels are purely for styling - I didn't link anything
+    at all. One thing to note - the statepicker stores all of the values as the two
+    charcter abbreviation of the state (New York = NY etc.) so when the form gets
+    submitted and a state is chosen, thats what will be sent through.
+
+    I also have not done anything to verify if they filled out every form or not.
+ -->
+
+    <form class="form--container">
+      <div class="form--container-left">
+        <p class="form--container-title">Create Group</p>
+        <p class="form--container-subtitle">Add a new group to your parish.</p>
+
+        <label for="account">Group Name</label>
+        <input type="text" name="groups" placeholder="Name">
+
+        <label for="groups">Group Description</label>
+        <textarea name="groups" rows="12" cols="60"></textarea>
+      </div>
+
+      <div class="form--container-right">
+
+        <p class="form--container-title">Review Group</p>
+        <p class="form--container-subtitle">Add a new group to your parish.</p>
+
+        <label for="account">Group Name I, requested by Michael Gingras</label>
+        <textarea name="groups" rows="6" cols="60" readonly>This is some placeholder text for a group.</textarea>
+        <button type="button" name="submit" class="approve--button">APPROVE</button>
+        <button type="button" name="submit" class="deny--button">DENY</button>
+
+      </div>
+
+      <!-- The submit button doesnt do anything right now either... -->
+      <button type="button" name="submit" class="submit--button">SUBMIT</button>
+    </form>
+
+
+  </body>
+</html>

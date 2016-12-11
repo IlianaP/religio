@@ -1,0 +1,141 @@
+<!--
+ M E S S A G E S .html
+for pastors to post messages to the community. Has the ability to view past
+messages and delete/update what is displayed to the users.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Church Deposit | Pastor Messages</title>
+
+    <link rel="stylesheet" type ="text/css" href="../assets/css/style.css">
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <header class="nav">
+      <div class="nav--link-container">
+        <a href= "../index.html" class ="nav--title">CHURCH DEPOSIT</a>
+        <a href ="../index.html" class="nav--link">Donations</a>
+        <a href ="calendar.html" class="nav--link">Calendar</a>
+        <a href ="messages.html" class="nav--link">Messages</a>
+        <a href ="announcements.html" class="nav--link">Announcements</a>
+        <a href ="fundraising.html" class="nav--link">Fundraising</a>
+        <a href ="groups.html" class="nav--link">Groups</a>
+        <a href ="settings.html" class="nav--link">Settings</a>
+        <!--
+        BACK END!!! ADD FUNCTIONALITY TO LOG OUT.
+        As of right now its a link, but I doubt you'll use a link to log out.
+        Just leave it as a hashtag, or change it from an 'a' element. If you
+        need any help feel free to contact me.
+       -->
+        <button  type="button" name="logout" class="nav--button">LOG OUT</button>
+      </div>
+    </header>
+
+    <div class="banner">
+      <div class="banner--info"><img src="../assets/info.png" alt="" /></div>
+      <p class = "banner--title">PASTOR MESSAGES</p>
+      <p class = "banner--subtitle">Make annoucements to the community.</p>
+    </div>
+
+    <form class="form--container">
+      
+      <div class="form--container-header">
+        <p class="form--container-title">Write New Message</p>
+        <p class="form--container-subtitle">These announcements will be seen by everyone in the community.</p>
+      </div>
+
+      <div class="form--container-left">
+        <label for="announcement">Message</label>
+        <textarea name="announcement" rows="16" cols="75"></textarea>
+      </div>
+
+      <div class="form--container-right">
+        <label for="title">Title</label>
+        <input type="text" name="title" placeholder="title">
+        <label for="author">Author</label>
+        <input type="text" name="author" placeholder="author">
+
+      </div>
+
+      <!-- Again, this button doesnt do anything yet.  -->
+      <button type="button" name="submit" class="submit--button">SUBMIT</button>
+    </form>
+      <!--
+      R E C E N T  P O S T S
+      - - - - - - - - - - - - - - -
+      This is the donation--table, which table holding all of the information
+      about recent donations. I have included a bunch of filler data in order to
+      populate it so you can see what it will look like when it is complete, and also
+      as a reference when creating actual data.
+
+      The -bold prefixed items should stay, along with the headers. The rest of the items
+      should be removed. I am not sure how you are planning on incorperating this data,
+      but the easisest way in my opinion would be to loop through all of the recent donations,
+      and echo out HTML with the correct data included rather than the filler that I have
+      included.
+
+      Let me know if you have any questions.
+     -->
+
+     <div class="donation--table">
+
+       <div class="donation--table--header">
+         <div class="donation--table--header-title">Recent Messages</div>
+       </div>
+
+       <div class="donation--table-row row-bold">
+         <p class="row--name text-bold">Title</p>
+         <p class="row--amount text-bold">Message</p>
+         <p class="row--date text-bold">Post Date</p>
+       </div>
+
+       <div class="donation--table-row">
+         <p class="row--name row-text">Post I</p>
+         <p class="row--amount row-text">$20</p>
+         <p class="row--date row-text">August 5th 2016</p>
+       </div>
+
+       <div class="donation--table-row">
+         <p class="row--name row-text">Post II</p>
+         <p class="row--amount row-text">$20</p>
+         <p class="row--date row-text">August 5th 2016</p>
+       </div>
+
+       <div class="donation--table-row">
+         <p class="row--name row-text">New Post</p>
+         <p class="row--amount row-text">$20</p>
+         <p class="row--date row-text">August 5th 2016</p>
+       </div>
+
+       <div class="donation--table-row">
+         <p class="row--name row-text">Post Three</p>
+         <p class="row--amount row-text">$20</p>
+         <p class="row--date row-text">August 5th 2016</p>
+       </div>
+
+       <div class="donation--table-row">
+         <p class="row--name row-text">New Post IV</p>
+         <p class="row--amount row-text">$20</p>
+         <p class="row--date row-text">August 5th 2016</p>
+       </div>
+
+     </div>
+
+    <script>
+
+    $( ".visibility--container" ).on( "click", function() {
+      // you could use this to make an AJAX call sending information about
+      // which choice was made. Or you can do it any other way you want,
+      // but im leaving this here in case you want it.
+    });
+
+    </script>
+
+  </body>
+</html>
