@@ -21,25 +21,6 @@ none of it is working back-end wise.
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 
-    <script type="text/javascript">
-    $( function() {
-     $( ".datepicker" ).datepicker();
-   } );
-
-   //function to display image preview.
-    function readURL(input) {
-             if (input.files && input.files[0]) {
-                 var reader = new FileReader();
-
-                 reader.onload = function (e) {
-                     $('#js-photo-preview')
-                         .attr('src', e.target.result);
-                 };
-                 reader.readAsDataURL(input.files[0]);
-             }
-       }
-
-    </script>
   </head>
   <body>
 
@@ -64,7 +45,7 @@ none of it is working back-end wise.
     </header>
 
     <div class="banner">
-      <div class="banner--info"><img src="../assets/info.png" alt="" /></div>
+      <div class="banner--info"><img src="../assets/settings.svg" alt="settings" /></div>
       <p class = "banner--title">SETTINGS</p>
       <p class = "banner--subtitle">Update your church and billing information.</p>
     </div>
@@ -82,201 +63,229 @@ none of it is working back-end wise.
     I also have not done anything to verify if they filled out every form or not.
  -->
 
-    <form class="form--container">
-      <div class="form--container-left">
-        <p class="form--container-title">Church Information</p>
-        <p class="form--container-subtitle">Important information about your parish.</p>
-        <label for="announcement">Name</label>
-        <input type="text" name="name" placeholder="Name">
-        <div class = "input-pair">
-          <div>
-            <label for="announcement">DBA Name</label>
-            <input type="text" name="dba" placeholder="DBA Name" class="input-med">
-          </div>
-          <div>
-          <label for="announcement">Tax ID</label>
-          <input type="text" name="taxid" placeholder="Tax ID" class="input-med">
-          </div>
-
-        </div>
-
-        <label for="announcement">Address</label>
-        <input type="text" name="taxid" placeholder="Street Address">
-        <div class="input-pair">
-        <input type="text" name="taxid" placeholder="City" class="input-xs">
-        <input type="text" name="taxid" placeholder="Zip Code" class="input-xs">
-        <select class ="state-select">
-        	<option value="AL">Alabama</option>
-        	<option value="AK">Alaska</option>
-        	<option value="AZ">Arizona</option>
-        	<option value="AR">Arkansas</option>
-        	<option value="CA">California</option>
-        	<option value="CO">Colorado</option>
-        	<option value="CT">Connecticut</option>
-        	<option value="DE">Delaware</option>
-        	<option value="DC">District Of Columbia</option>
-        	<option value="FL">Florida</option>
-        	<option value="GA">Georgia</option>
-        	<option value="HI">Hawaii</option>
-        	<option value="ID">Idaho</option>
-        	<option value="IL">Illinois</option>
-        	<option value="IN">Indiana</option>
-        	<option value="IA">Iowa</option>
-        	<option value="KS">Kansas</option>
-        	<option value="KY">Kentucky</option>
-        	<option value="LA">Louisiana</option>
-        	<option value="ME">Maine</option>
-        	<option value="MD">Maryland</option>
-        	<option value="MA">Massachusetts</option>
-        	<option value="MI">Michigan</option>
-        	<option value="MN">Minnesota</option>
-        	<option value="MS">Mississippi</option>
-        	<option value="MO">Missouri</option>
-        	<option value="MT">Montana</option>
-        	<option value="NE">Nebraska</option>
-        	<option value="NV">Nevada</option>
-        	<option value="NH">New Hampshire</option>
-        	<option value="NJ">New Jersey</option>
-        	<option value="NM">New Mexico</option>
-        	<option value="NY">New York</option>
-        	<option value="NC">North Carolina</option>
-        	<option value="ND">North Dakota</option>
-        	<option value="OH">Ohio</option>
-        	<option value="OK">Oklahoma</option>
-        	<option value="OR">Oregon</option>
-        	<option value="PA">Pennsylvania</option>
-        	<option value="RI">Rhode Island</option>
-        	<option value="SC">South Carolina</option>
-        	<option value="SD">South Dakota</option>
-        	<option value="TN">Tennessee</option>
-        	<option value="TX">Texas</option>
-        	<option value="UT">Utah</option>
-        	<option value="VT">Vermont</option>
-        	<option value="VA">Virginia</option>
-        	<option value="WA">Washington</option>
-        	<option value="WV">West Virginia</option>
-        	<option value="WI">Wisconsin</option>
-        	<option value="WY">Wyoming</option>
-        </select>
+<form class="form--container">
+  <div class="form--container-left">
+    <p class="form--container-title">Church Settings</p>
+    <p class="form--container-subtitle">Basic information about your parish.</p>
+    <label for="announcement">Name</label>
+    <input type="text" name="name" placeholder="Name">
+    <div class = "input-pair">
+      <div>
+        <label for="announcement">DBA Name</label>
+        <input type="text" name="dba" placeholder="DBA Name" class="input-med">
+      </div>
+      <div>
+      <label for="announcement">Tax ID</label>
+      <input type="text" name="taxid" placeholder="Tax ID" class="input-med">
       </div>
 
-      <label for="announcement">Phone Number</label>
-      <input type="text" name="name" placeholder="123-456-7890">
+    </div>
 
-      <label for="announcement">Website</label>
-      <input type="text" name="name" placeholder="example.com">
+    <label for="announcement">Address</label>
+    <input type="text" name="taxid" placeholder="Street Address">
+    <div class="input-pair">
+    <input type="text" name="taxid" placeholder="City" class="input-xs">
+    <input type="text" name="taxid" placeholder="Zip Code" class="input-xs">
+    <select class ="state-select">
+      <option value="AL">Alabama</option>
+      <option value="AK">Alaska</option>
+      <option value="AZ">Arizona</option>
+      <option value="AR">Arkansas</option>
+      <option value="CA">California</option>
+      <option value="CO">Colorado</option>
+      <option value="CT">Connecticut</option>
+      <option value="DE">Delaware</option>
+      <option value="DC">District Of Columbia</option>
+      <option value="FL">Florida</option>
+      <option value="GA">Georgia</option>
+      <option value="HI">Hawaii</option>
+      <option value="ID">Idaho</option>
+      <option value="IL">Illinois</option>
+      <option value="IN">Indiana</option>
+      <option value="IA">Iowa</option>
+      <option value="KS">Kansas</option>
+      <option value="KY">Kentucky</option>
+      <option value="LA">Louisiana</option>
+      <option value="ME">Maine</option>
+      <option value="MD">Maryland</option>
+      <option value="MA">Massachusetts</option>
+      <option value="MI">Michigan</option>
+      <option value="MN">Minnesota</option>
+      <option value="MS">Mississippi</option>
+      <option value="MO">Missouri</option>
+      <option value="MT">Montana</option>
+      <option value="NE">Nebraska</option>
+      <option value="NV">Nevada</option>
+      <option value="NH">New Hampshire</option>
+      <option value="NJ">New Jersey</option>
+      <option value="NM">New Mexico</option>
+      <option value="NY">New York</option>
+      <option value="NC">North Carolina</option>
+      <option value="ND">North Dakota</option>
+      <option value="OH">Ohio</option>
+      <option value="OK">Oklahoma</option>
+      <option value="OR">Oregon</option>
+      <option value="PA">Pennsylvania</option>
+      <option value="RI">Rhode Island</option>
+      <option value="SC">South Carolina</option>
+      <option value="SD">South Dakota</option>
+      <option value="TN">Tennessee</option>
+      <option value="TX">Texas</option>
+      <option value="UT">Utah</option>
+      <option value="VT">Vermont</option>
+      <option value="VA">Virginia</option>
+      <option value="WA">Washington</option>
+      <option value="WV">West Virginia</option>
+      <option value="WI">Wisconsin</option>
+      <option value="WY">Wyoming</option>
+    </select>
+  </div>
 
-      <label for="photo">Church Photo</label>
-      <input type="file" name="photo" onchange="readURL(this);">
-      <img src="#" alt="" id="js-photo-preview" class="fundraising--photo" />
+  <label for="announcement">Phone Number</label>
+  <input type="text" name="name" placeholder="123-456-7890">
 
+  <label for="announcement">Website</label>
+  <input type="text" name="name" placeholder="example.com">
+
+  <label for="photo">Church Photo</label>
+  <input type="file" name="photo" onchange="readURL(this);">
+  <img src="#" alt="" id="js-photo-preview" class="fundraising--photo" />
+
+  </div>
+
+  <div class="form--container-right">
+    <p class="form--container-title">Mass Times</p>
+    <p class="form--container-subtitle">Update weekly Mass times.</p>
+
+    <label for="route">Sunday</label>
+    <div data-day="sunday">
+      <div class ="input-pair">
+        <input type="text" name="account" placeholder="Start Time" class ="input-med">
+        <input type="text" name="account" placeholder="End Time" class ='input-med'>
       </div>
+    </div>
+    <button type="button" name="sunday" class ="js-add-masstime mass--button">Add Mass Time</button>
 
-      <div class="form--container-right padding-l100">
-
-        <p class="form--container-title">Banking Information</p>
-        <p class="form--container-subtitle">Details for billing settings.</p>
-
-        <label for="route">Routing Number</label>
-        <input type="text" name="routing" placeholder="Routing Number">
-
-        <label for="account">Account Number</label>
-        <input type="text" name="account" placeholder="Account Number">
-
-        <label for="account">Card Number</label>
-        <input type="text" name="account" placeholder="Card Number">
-
-        <div class ="input-pair">
-          <div>
-          <label for="account">Exp. Date</label>
-          <input type="text" name="account" placeholder="Expiration Date" class ="input-med datepicker">
-        </div>
-        <div>
-          <label for="account">Security Code</label>
-          <input type="text" name="account" placeholder="Security Code" class ='input-med'>
-        </div>
+    <label for="route">Monday</label>
+    <div data-day="monday">
+      <div class ="input-pair">
+        <input type="text" name="account" placeholder="Start Time" class ="input-med">
+        <input type="text" name="account" placeholder="End Time" class ='input-med'>
       </div>
+    </div>
+    <button type="button" name="monday" class ="js-add-masstime mass--button">Add Mass Time</button>
 
-
+    <label for="route">Tuesday</label>
+    <div data-day="tuesday">
+      <div class ="input-pair">
+        <input type="text" name="account" placeholder="Start Time" class ="input-med">
+        <input type="text" name="account" placeholder="End Time" class ='input-med'>
       </div>
+    </div>
+    <button type="button" name="tuesday" class ="js-add-masstime mass--button">Add Mass Time</button>
 
-      <div class="form--container-right padding-l100">
-
-        <p class="form--container-title">Mass Times</p>
-        <p class="form--container-subtitle">Update weekly Mass times.</p>
-
-        <label for="route">Sunday</label>
-        <div class ="input-pair">
-          <div>
-          <input type="text" name="account" placeholder="Start Time" class ="input-med">
-        </div>
-        <div>
-          <input type="text" name="account" placeholder="End Time" class ='input-med'>
-        </div>
+    <label for="route">Wednesday</label>
+    <div data-day="wednesday">
+      <div class ="input-pair">
+        <input type="text" name="account" placeholder="Start Time" class ="input-med">
+        <input type="text" name="account" placeholder="End Time" class ='input-med'>
       </div>
-        <label for="route">Monday</label>
-        <div class ="input-pair">
-          <div>
-          <input type="text" name="account" placeholder="Start Time" class ="input-med">
-        </div>
-        <div>
-          <input type="text" name="account" placeholder="End Time" class ='input-med'>
-        </div>
-      </div>
-        <label for="route">Tuesday</label>
-        <div class ="input-pair">
-          <div>
-          <input type="text" name="account" placeholder="Start Time" class ="input-med">
-        </div>
-        <div>
-          <input type="text" name="account" placeholder="End Time" class ='input-med'>
-        </div>
-      </div>
-        <label for="route">Wednesday</label>
-        <div class ="input-pair">
-          <div>
-          <input type="text" name="account" placeholder="Start Time" class ="input-med">
-        </div>
-        <div>
-          <input type="text" name="account" placeholder="End Time" class ='input-med'>
-        </div>
-      </div>
-        <label for="route">Thursday</label>
-        <div class ="input-pair">
-          <div>
-          <input type="text" name="account" placeholder="Start Time" class ="input-med">
-        </div>
-        <div>
-          <input type="text" name="account" placeholder="End Time" class ='input-med'>
-        </div>
-        </div>
-        <label for="route">Friday</label>
-        <div class ="input-pair">
-          <div>
-          <input type="text" name="account" placeholder="Start Time" class ="input-med">
-        </div>
-        <div>
-          <input type="text" name="account" placeholder="End Time" class ='input-med'>
-        </div>
-        </div>
-        <label for="route">Saturday</label>
-        <div class ="input-pair">
-          <div>
-            <input type="text" name="account" placeholder="Start Time" class ="input-med">
-          </div>
-          <div>
-            <input type="text" name="account" placeholder="End Time" class ='input-med'>
-          </div>
-        </div>
+    </div>
+    <button type="button" name="wednesday" class ="js-add-masstime mass--button">Add Mass Time</button>
 
-      <input type="text" name="account" style="visibility:hidden;">
+    <label for="route">Thursday</label>
+    <div data-day="thursday">
+      <div class ="input-pair">
+        <input type="text" name="account" placeholder="Start Time" class ="input-med">
+        <input type="text" name="account" placeholder="End Time" class ='input-med'>
+      </div>
+    </div>
+    <button type="button" name="thursday" class ="js-add-masstime mass--button">Add Mass Time</button>
 
 
+    <label for="route">Friday</label>
+    <div data-day="friday">
+      <div class ="input-pair">
+        <input type="text" name="account" placeholder="Start Time" class ="input-med">
+        <input type="text" name="account" placeholder="End Time" class ='input-med'>
       </div>
+    </div>
+    <button type="button" name="friday" class ="js-add-masstime mass--button">Add Mass Time</button>
 
-      <!-- The submit button doesnt do anything right now either... -->
-      <button type="button" name="submit" class="submit--button">SUBMIT</button>
-    </form>
+    <label for="route">Saturday</label>
+    <div data-day="saturday">
+      <div class ="input-pair">
+        <input type="text" name="account" placeholder="Start Time" class ="input-med">
+        <input type="text" name="account" placeholder="End Time" class ='input-med'>
+      </div>
+    </div>
+    <button type="button" name="saturday" class ="js-add-masstime mass--button">Add Mass Time</button>
+
+  <input type="text" name="account" style="visibility:hidden;">
+
+  </div>
+    <button type="button" name="submit" class="submit--button">SAVE</button>
+</form>
+
+
+<form class="form--container">
+  <div class="form--container-left">
+
+    <p class="form--container-title">Banking Information</p>
+    <p class="form--container-subtitle">Update your billing settings.</p>
+
+    <label for="route">Routing Number</label>
+    <input type="text" name="routing" placeholder="Routing Number">
+
+    <label for="account">Account Number</label>
+    <input type="text" name="account" placeholder="Account Number">
+
+    <label for="account">Card Number</label>
+    <input type="text" name="account" placeholder="Card Number">
+
+    <div class ="input-pair">
+      <div>
+      <label for="account">Exp. Date</label>
+      <input type="text" name="account" placeholder="Expiration Date" class ="input-med datepicker">
+    </div>
+    <div>
+      <label for="account">Security Code</label>
+      <input type="text" name="account" placeholder="Security Code" class ='input-med'>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- The submit button doesnt do anything right now either... -->
+  <button type="button" name="submit" class="submit--button">SAVE</button>
+</form>
+
+
+<script type="text/javascript">
+$( function() {
+ $( ".datepicker" ).datepicker();
+} );
+
+//function to display image preview.
+function readURL(input) {
+         if (input.files && input.files[0]) {
+             var reader = new FileReader();
+
+             reader.onload = function (e) {
+                 $('#js-photo-preview')
+                     .attr('src', e.target.result);
+             };
+             reader.readAsDataURL(input.files[0]);
+         }
+   }
+
+  $( ".js-add-masstime" ).click(function() {
+     var name = $(this).attr('name');
+     $('*[data-day='+name+']').append("<div class ='input-pair'><input type='text' name='account' placeholder='Start Time' class ='input-med'>"+
+     "<input type='text' name='account' placeholder='End Time' class ='input-med'></div>");
+   });
+
+</script>
 
   </body>
 </html>

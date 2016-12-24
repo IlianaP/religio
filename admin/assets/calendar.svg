@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>calendar</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="calendar" transform="translate(-39.000000, -40.000000)">
+            <g transform="translate(39.000000, 40.000000)">
+                <circle id="Oval-2" fill="#1A699E" cx="60" cy="60" r="60"></circle>
+                <g id="Group" transform="translate(23.500000, 28.000000)">
+                    <ellipse id="Oval" fill="#FFFFFF" cx="17.4855655" cy="26.7770585" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="26.5575744" cy="26.7770585" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="35.9222288" cy="26.7770585" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="44.9210763" cy="26.7770585" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="53.8467625" cy="26.7770585" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="62.9187714" cy="26.7770585" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="8.486718" cy="34.9711311" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="17.4855655" cy="34.9711311" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <circle id="Oval" fill="#FFFFFF" cx="26.8502199" cy="34.9711311" r="2.7069704"></circle>
+                    <circle id="Oval" fill="#FFFFFF" cx="35.9222288" cy="34.9711311" r="2.7069704"></circle>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="44.8479149" cy="34.9711311" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="53.8467625" cy="34.9711311" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="8.486718" cy="43.3115263" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="17.4855655" cy="43.3115263" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <circle id="Oval" fill="#FFFFFF" cx="26.8502199" cy="43.3115263" r="2.7069704"></circle>
+                    <circle id="Oval" fill="#FFFFFF" cx="35.9222288" cy="43.3115263" r="2.7069704"></circle>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="8.486718" cy="51.8714057" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="17.4855655" cy="51.8714057" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="26.8502199" cy="51.8714057" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="35.9222288" cy="51.8714057" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="44.8479149" cy="43.3115263" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="53.8467625" cy="43.3115263" rx="2.7069704" ry="2.7069704"></ellipse>
+                    <path d="M0.36580681,15.862844 L72.5029098,15.862844" id="Shape" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M68.2595508,61.8945123 L4.60916581,61.8945123 C2.26800222,61.8945123 0.36580681,59.9923169 0.36580681,57.6511533 L0.36580681,8.63304072 C0.36580681,6.29187714 2.26800222,4.38968172 4.60916581,4.38968172 L68.2595508,4.38968172 C70.6007144,4.38968172 72.5029098,6.29187714 72.5029098,8.63304072 L72.5029098,57.6511533 C72.5029098,59.9923169 70.6007144,61.8945123 68.2595508,61.8945123 L68.2595508,61.8945123 Z" id="Shape" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M16.7959525,0.36580681 L16.7959525,8.486718" id="Shape" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M55.9865083,0.36580681 L55.9865083,8.486718" id="Shape" stroke="#FFFFFF" stroke-width="2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
