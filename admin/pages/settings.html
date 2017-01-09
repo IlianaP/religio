@@ -28,7 +28,7 @@ none of it is working back-end wise.
       <div class="nav--link-container">
         <a href= "../index.html" class ="nav--title">CHURCH DEPOSIT</a>
         <a href ="../index.html" class="nav--link">Donations</a>
-        <a href ="calendar.html" class="nav--link">Calendar</a>
+        <a href ="calendar.html" class="nav--link">calendar</a>
         <a href ="messages.html" class="nav--link">Messages</a>
         <a href ="announcements.html" class="nav--link">Announcements</a>
         <a href ="fundraising.html" class="nav--link">Fundraising</a>
@@ -68,15 +68,15 @@ none of it is working back-end wise.
     <p class="form--container-title">Church Settings</p>
     <p class="form--container-subtitle">Basic information about your parish.</p>
     <label for="announcement">Name</label>
-    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="name" placeholder="First and Last">
     <div class = "input-pair">
       <div>
         <label for="announcement">DBA Name</label>
-        <input type="text" name="dba" placeholder="DBA Name" class="input-med">
+        <input type="text" name="dba" placeholder="DBA" class="input-med">
       </div>
       <div>
       <label for="announcement">Tax ID</label>
-      <input type="text" name="taxid" placeholder="Tax ID" class="input-med">
+      <input type="text" name="taxid" placeholder="12-3456789" class="input-med">
       </div>
 
     </div>
@@ -157,6 +157,9 @@ none of it is working back-end wise.
     <p class="form--container-title">Mass Times</p>
     <p class="form--container-subtitle">Update weekly Mass times.</p>
 
+      <label for="announcement">Mass Time Notes</label>
+      <textarea name="announcement" rows="10" cols="47"></textarea>
+
     <label for="route">Sunday</label>
     <div data-day="sunday">
       <div class ="input-pair">
@@ -235,22 +238,22 @@ none of it is working back-end wise.
     <p class="form--container-subtitle">Update your billing settings.</p>
 
     <label for="route">Routing Number</label>
-    <input type="text" name="routing" placeholder="Routing Number">
+    <input type="text" name="routing" placeholder="xxxxxxxxx">
 
     <label for="account">Account Number</label>
-    <input type="text" name="account" placeholder="Account Number">
+    <input type="text" name="account" placeholder="xxxxxxxxxx">
 
     <label for="account">Card Number</label>
-    <input type="text" name="account" placeholder="Card Number">
+    <input type="text" name="account" placeholder="xxxx-xxxx-xxxx-xxxx">
 
     <div class ="input-pair">
       <div>
       <label for="account">Exp. Date</label>
-      <input type="text" name="account" placeholder="Expiration Date" class ="input-med datepicker">
+      <input type="text" name="account" placeholder="mo/yr" class ="input-med datepicker">
     </div>
     <div>
       <label for="account">Security Code</label>
-      <input type="text" name="account" placeholder="Security Code" class ='input-med'>
+      <input type="text" name="account" placeholder="xxx" class ='input-med'>
     </div>
   </div>
 
